@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header h1 {
+  font-size: 3rem;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header h1 span {
+  color: red;
+}
+
+main {
+  margin: 2rem;
+}
+main h2 {
+  margin-bottom: 1rem;
+}
+
+/* forside */
+
+.category_list_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 5px;
+  gap: 1rem;
+}
+.category_list_container a {
+  background-color: gray;
+  padding: 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+
+/* ProductList */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.productlist main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+}
+.productlist article {
+  position: relative;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 7;
+  gap: 0;
+}
+
+.productlist main h2 {
+  grid-column: 1/-1;
+}
+.productlist article h3 {
+  font-size: 1rem;
+}
+.productlist article > * {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.productlist .sold_out_and_img_container {
+  display: grid;
+  > * {
+    place-self: start start;
+    grid-area: 1/1;
+  }
+}
+
+.productlist .soldOut img {
+  opacity: 0.3;
+}
+.productlist .soldOutTxt {
+  display: none;
+}
+.productlist .soldOut .soldOutTxt {
+  display: block;
+}
+.productlist .discount_element p {
+  display: none;
+}
+.productlist .discounted .discount_element {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Product */
+
+.breadcrumbs {
+  display: none;
+}
+
+.purchaseBox {
+  background: #d8d8d8;
+  color: var(--background-color);
+  padding: 1rem;
+}
+.info {
+  padding: 1rem;
+}
+.product select {
+  min-width: 100px;
+}
+.product main {
+  display: grid;
+}
+.product main .breadcrumbs,
+.product main img {
+  grid-column: 1/-1;
+}
+.purchaseBox form label {
+  gap: 1rem;
+}
+.purchaseBox button {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+dt {
+  font-weight: 700;
+}
