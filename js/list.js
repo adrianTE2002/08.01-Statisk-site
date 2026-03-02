@@ -30,8 +30,9 @@ function showProducts(productsArr) {
         `
             : ""
         }
-        <a href="produkt.html">Read more</a>
-      </div>
-    </article>`;
+        </div>
+        <a href="produkt.html?id=${product.id}">Read more</a>
+    </article>
+    `;
   });
 }
